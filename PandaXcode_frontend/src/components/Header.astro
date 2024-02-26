@@ -1,0 +1,29 @@
+---
+import HeaderLogo from "@/img/Logotipo.astro";
+---
+
+<header class=" header rounded-bl-lg rounded-br-3xl absolute w-full h-24" >
+    <div class="contenedor p-6 flex items-center justify-between h-full">
+        <a class="logotipo flex h-full gap-2 items-center text-outscope hover:text-primary">
+            <HeaderLogo class=" w-20 h-full block" />
+            <h1 class="text-[3.2rem] ">PandaX{"/>"} </h1>    
+        </a>
+
+        <nav class=" hidden sm:flex text-outscope gap-3">
+            <a href="" class="hover:text-primary text-md capitalize">inicio</a>
+            <a href="" class="hover:text-primary text-md capitalize">Proyectos</a>
+            <a href="" class="hover:text-primary text-md capitalize">Sobre Mi</a>
+            <a href="" class="hover:text-primary text-md capitalize">Cursos</a>
+            <a href="" class="hover:text-primary text-md capitalize">Contacto</a>
+        </nav>
+    </div>
+    
+</header>
+
+<style>
+    .header{
+        backdrop-filter: blur(10px);
+        background-color: rgba(121, 121, 121, 0.06);
+        box-shadow: #0c0c0c 0px 4px 17px;
+    }
+</style>

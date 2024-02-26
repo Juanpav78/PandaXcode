@@ -1,0 +1,80 @@
+---
+
+---
+
+
+
+<div class="waves">
+    <div class="wave">a</div>
+    <div class="wave">a</div>
+    <div class="wave">a</div>
+</div>
+
+
+<style is:global>
+        /** 
+        * TODO: Buscar una forma de realizar las olas de una forma responsive, debido a que la imagen se queda muy pequeña cuando la pantalla es muy grande
+        */
+    .waves{
+        position: relative;
+        width: 100%;
+        height: 14rem;
+        margin-top: -14rem;
+
+    }
+    .wave{
+        position: absolute;
+        width:300%;
+        height: 160%;
+        min-width: 200rem;
+        background-repeat: repeat-x;
+        background-size: 50%;
+    }
+    .wave:nth-of-type(1){
+        background-image: url("../img/wave_primary.svg");
+        opacity: .6;
+        background-position: 50%;
+        animation: waves1 17s infinite linear;
+    }
+    .wave:nth-of-type(2){
+        background-image: url("../img/wave_secondary.svg");
+        background-position: 0%;
+        opacity: .8;
+        animation: waves1 14s infinite linear;
+    }
+    .wave:nth-of-type(3){
+        background-image: url("../img/wave_white.svg");
+        background-position: 100%;
+        animation: waves1 20s infinite linear;
+    }
+    @keyframes waves1 {
+        0%{
+            transform: translateX(0%);
+        }
+
+        100%{
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes waves2 {
+        0%{
+            transform: translateX(-800px);
+        }
+
+        100%{
+            transform: translateX(-1000px);
+        }
+    }
+
+    @keyframes waves3 {
+        0%{
+            transform: translate(-500px ,50px);
+        }
+
+        100%{
+            transform: translate(-800px , 0px);
+
+        }
+    }
+</style>
